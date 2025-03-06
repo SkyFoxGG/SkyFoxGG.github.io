@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: linear-gradient(black, black, goldenrod);
+}
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+nav {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    top: 0;
+}
+.nav-contacts {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    text-align: end;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        &:first-child {
+            margin-right: 40px;
+            transition-duration: 0.25s;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+        i {
+            font-size: 20px;
+            transition-duration: 0.25s;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+    }
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    img {
+        height: 100px;
+    }
+}
+.nav-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+        text-decoration: none;
+        padding: 20px 40px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: white;
+        transition-duration: 0.25s;
+        &:hover {
+            border: goldenrod 1px solid;
+        }
+    }
+}
+header {
+    padding-top: 104px;
+}
+.header-logo {
+    img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.header-descriptoin {
+    margin-bottom: 50px;
+    p {
+        margin-bottom: 50px;
+        width: 70%;
+        padding: 20px;
+        border: 1px solid white;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        color: white;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+}
+.header-about {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    .unit {
+        width: 20%;
+        i {
+            font-size: 35px;
+            color: white;
+            text-align: center;
+            display: block;
+        }
+        p {
+            text-align: center;
+            color: white;
+        }
+    }
+}
+main {
+    .tittle {
+        color: white;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+.works {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin-bottom: 50px;
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .unit {
+        cursor: pointer;
+        width: 24%;
+        transition-duration: 0.25s;
+        &:hover {
+            transform: scale(102%);
+        }
+    }
+}
+.feedbacks {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    .feedback {
+        width: 48%;
+        padding: 15px;
+        background-color: white;
+        border-radius: 5px;
+        .star {
+            color: gold;
+            margin-bottom: 10px;
+            font-size: 25px;
+        }
+        h2 {
+            font-size: 20px;
+            display: inline-block;
+            margin-right: 10px;
+        }
+        p {
+            font-size: 18px;
+            padding-left: 10px;
+            font-weight: 1;
+        }
+    }
+}
+.send-feedback {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    p {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    button {
+        padding: 10px;
+        border-radius: 25px;
+        background-color: goldenrod;
+        border: solid 1px white;
+        color: white;
+    }
+    textarea {
+        font-size: 18px;
+        padding: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        resize: none;
+        width: 100%;
+    }
+}
+.rating-area {
+    overflow: hidden;
+    float: left;
+}
+.rating-area:not(:checked) > input {
+    display: none;
+}
+.rating-area:not(:checked) > label {
+    float: right;
+    width: 42px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 32px;
+    line-height: 32px;
+    color: lightgrey;
+}
+.rating-area:not(:checked) > label:before {
+    content: "★";
+}
+.rating-area > input:checked ~ label {
+    color: gold;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+    color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+}
+.rate-area > label:active {
+    position: relative;
+}
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    .info {
+        color: white;
+        margin-bottom: 25px;
+        a {
+            transition-duration: 0.25s;
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+    }
+    p {
+        color: white;
+    }
+}
+.nav-list-icon {
+    color: white;
+    display: none;
+    padding: 20px;
+}
+.more{
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    border: 1px gray solid;
+    border-radius: 15px;
+    padding: 15px 30px;
+    transition: 0.25s;
+    display: none;
+    &:hover{
+        border-color: goldenrod;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-buttons {
+        display: none;
+    }
+    .nav-contacts {
+        display: none;
+    }
+
+    .nav-list-icon {
+        display: block;
+    }
+    .nav-content {
+        justify-content: space-between;
+    }
+    .header-descriptoin{
+        p{
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+    .header-about{
+        row-gap: 25px;
+        .unit{
+            width: 50%;
+        }
+    }
+    .feedbacks{
+        margin-bottom: 30px;
+        .feedback{
+        width: 100%;
+        margin-bottom: 15px;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .more{
+        display: inline-block;
+    }
+    .send-feedback{
+        padding: 15px;
+    }
+    .works{
+        .unit{
+            width: 45%;
+        }
+    }
+}

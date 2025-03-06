@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body {
+    background: black;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+nav {
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    top: 0;
+}
+.nav-contacts {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    text-align: end;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        &:first-child {
+            margin-right: 40px;
+            transition-duration: 0.25s;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+        i {
+            font-size: 20px;
+            transition-duration: 0.25s;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+    }
+}
+.nav-content {
+    display: flex;
+    align-items: center;
+    img {
+        height: 100px;
+    }
+}
+.nav-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    a {
+        text-decoration: none;
+        padding: 20px 40px;
+        border-radius: 10px;
+        border: 1px solid white;
+        color: white;
+        transition-duration: 0.25s;
+        &:hover {
+            border: goldenrod 1px solid;
+        }
+    }
+}
+main {
+    margin-top: 108px;
+    margin-bottom: 50px;
+}
+.main-form-bg {
+    background-image: url(img/golden-monstera-leaves-background-design-resource.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 50px;
+}
+.main-form {
+    backdrop-filter: blur(3px);
+    padding: 50px 10px;
+    form {
+        width: 50%;
+        margin: 0 auto;
+    }
+    h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 50px;
+    }
+    label {
+        color: white;
+        font-size: 18px;
+    }
+    input {
+        background: none;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        padding: 8px 20px;
+        width: 60%;
+    }
+    select {
+        background: none;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        padding: 8px 20px;
+        width: 45%;
+        cursor: pointer;
+    }
+    option {
+        background-color: black;
+    }
+    button {
+        color: white;
+        border: none;
+        border-radius: 20px;
+        background-color: goldenrod;
+        padding: 10px 30px;
+        display: block;
+        margin: 0 auto;
+        transition-duration: 0.25;
+        font-size: 15px;
+        transition-duration: 0.25s;
+        &:hover {
+            transform: scale(102%);
+            background-color: rgb(236, 179, 33);
+        }
+    }
+}
+.space {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+.locate {
+    h1 {
+        text-align: center;
+        color: white;
+        margin-bottom: 50px;
+    }
+}
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    .info {
+        color: white;
+        margin-bottom: 25px;
+
+        a {
+            transition-duration: 0.25s;
+            text-decoration: none;
+            color: white;
+            &:hover {
+                color: goldenrod;
+            }
+        }
+    }
+    p {
+        color: white;
+    }
+}
+.window {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    .success {
+        width: 400px;
+        height: 180px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: black;
+        border-radius: 10px;
+        border: rgb(71, 71, 71) 1px solid;
+        padding: 30px;
+        i {
+            color: goldenrod;
+            display: block;
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        p {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: goldenrod;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            color: white;
+            display: block;
+            margin: 0 auto;
+            &:hover {
+                background-color: rgb(236, 179, 33);
+            }
+        }
+    }
+}
+.nav-list-icon {
+    color: white;
+    display: none;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .main-form {
+        form {
+            width: 75%;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav-buttons {
+        display: none;
+    }
+    .nav-contacts {
+        display: none;
+    }
+
+    .nav-list-icon {
+        display: block;
+    }
+    .nav-content {
+        justify-content: space-between;
+    }
+    .main-form {
+        form {
+            width: 90%;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .main-form {
+        form {
+            width: 75%;
+        }
+        label {
+            width: 100%;
+            padding-bottom: 10px;
+        }
+        input {
+            width: 100%;
+        }
+        select {
+            width: 100%;
+            &:first-child {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .space {
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .main-form {
+        h1{
+            margin-bottom: 30px;
+            font-size: 25px;
+        }
+        form {
+            width: 90%;
+        }
+}
+.locate{
+    h1{
+        font-size: 25px;
+        margin-bottom: 30px; 
+    }
+}
+}
